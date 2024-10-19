@@ -28,7 +28,9 @@ body{
 .search{
     display: flex;
     align-items: center;
-    justify-content: center ;
+    justify-content: center;
+    justify-self: center;
+    
     margin-top: 3em;
 }
 .search input{
@@ -39,6 +41,7 @@ body{
     outline: none;
     color: #000;
     font-weight: bold;
+    flex-shrink: 1;
 }
 .search button{
     background-color: transparent;
@@ -46,16 +49,26 @@ body{
     border: none;
     transform: translate(-30px, 0);
     cursor: pointer;
+    flex-shrink: 1;
 }
 .search img{
     width: 46px;
+    flex-shrink: 1;
+}   
+@media(max-width: 350px){
+    .search{
+        margin-left: 15%;
+    }
 }
+
 
 main{
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-top: 3em;
+    
+    flex-wrap: wrap;
 }
 
 .content-weather{
@@ -65,6 +78,7 @@ main{
     justify-content: center;
     gap: 2em;
     position: relative;
+    flex-shrink: 1;
 }
 .content-weather img{
     width: 150px;
@@ -84,6 +98,9 @@ main{
     font-weight: 700;
     text-align: center;
 }
+.content-weather .temp-max, .content-weather .temp-min{
+    text-transform: uppercase;
+}
 .content-weather .temp-max-min{
     display: flex;
     align-items: center;
@@ -98,7 +115,7 @@ main{
     top: 0;
     left: 0;
     width: 350px;
-    height: 110%;
+    height: 450px;
     border-radius: 50px;
     background: linear-gradient(180deg, rgba(194, 188, 194, 0.00) 0%, rgba(194, 188, 194, 0.80) 49.26%);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
@@ -113,11 +130,15 @@ main{
     justify-content: center;
     gap: 2em;
     position: relative;
+    margin-top: 9em;
+    margin-bottom: 5em;
+    flex-shrink: 1;
 }
 .content-music img{
     width: 100px;
 }
 .content-music h2{
+    width: 350px;
     font-size: 2em;
     font-weight: 700;
     text-transform: uppercase;
@@ -126,8 +147,8 @@ main{
 .content-music .playlist-box{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     gap: 1.5em;
     list-style-type: none;
 }
@@ -144,6 +165,10 @@ main{
 .playlist-box p{
     font-size: 1.2em;
     font-weight: 600;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .content-music::after{
     content: '';
@@ -151,10 +176,15 @@ main{
     top: 0;
     left: 0;
     width: 350px;
-    height: 110%;
+    height: 450px;
     border-radius: 50px;
     background: linear-gradient(180deg, rgba(194, 188, 194, 0.00) 0%, rgba(194, 188, 194, 0.80) 49.26%);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     filter: blur(4.5px);
     z-index: -1;
+}
+@media(max-width: 700px){
+    .content-music{
+        margin-top: 7em;
+    }
 }
