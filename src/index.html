@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,50 @@
     <script src="scripts.js" defer></script>
     <title>App Previsão do tempo - StackCode</title>
 </head>
-<body>
-    <section class="container">
-        <video class="video" autoplay muted loop>
-            <source id="video-source" src="video/video1.mp4" type="video/mp4">
-        </video>
 
+<body>
+    <video class="video" autoplay muted loop>
+        <source id="video-source" src="video/video1.mp4" type="video/mp4">
+    </video>
+
+    <section class="container">
+        <div class="search">
+            <input type="text" placeholder="Digite aqui o seu texto" id="input-search">
+            <button id="btn-search">
+                <img src="img/Pesquisa.png" alt="Icone do botão pesquisar">
+            </button>
+        </div>
+
+        <main>
+            <div class="content-weather">
+                <img src="img/01d.png" alt="Icone do clima" id="icone-clima">
+                <p class="nome-cidade">Nome da Cidade</p>
+                <p class="graus">Graus Celsius</p>
+                <div class="temp-max-min">
+                    <p class="temp-max">máx: 30</p>
+                    <p class="temp-min">min: 25</p>
+                </div>
+            </div>
+            <div class="content-music">
+                <img src="img/music.png" alt="Icone musica" id="icone-musica">
+                <h2>Playlist</h2>
+                <ul class="playlist-box">
+                    <li>
+                        <img src="img/image 3.png" alt="">
+                        <p>Nome da música</p>
+                    </li>
+                    <li>
+                        <img src="img/image 3.png" alt="">
+                        <p>Nome da música</p>
+                    </li>
+                    <li>
+                        <img src="img/image 3.png" alt="">
+                        <p>Nome da música</p>
+                    </li>
+                </ul>
+            </div>
+        </main>
     </section>
 </body>
+
 </html>
